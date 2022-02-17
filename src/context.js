@@ -64,7 +64,7 @@ const AppProvider = ({ children }) => {
             if(!search){ 
                 setDisplaylist(list);
             }else{
-                const tmpList = list.filter(item => item.title.startsWith(search)==true);
+                const tmpList = list.filter(item => item.title.toLowerCase().startsWith(search.toLocaleLowerCase())==true);
                 setDisplaylist(tmpList);
             }
         }
